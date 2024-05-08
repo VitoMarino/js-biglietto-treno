@@ -7,18 +7,24 @@
 
 const numerokm = parseInt(prompt("Quanti km vuoi percorrere?"));
 const età = parseInt(prompt("Quanti anni hai?"));
-let prezzo = 0.276;
+let prezzoAlKilometro = 0.276;
 let percentualeScontoUno = 21;
 let percentualeScontoDue = 42;
+let prezzoPieno = numerokm * prezzoAlKilometro;
 
-let sconto = (prezzo/100) * percentualeScontoUno;
-let scontoDue = (prezzo/100) * percentualeScontoDue;
+if (età <= 17) {
+    //FORMULA SEMPLIFICATA
+    let prezzoFinale = (prezzoPieno/100) * percentualeScontoUno;
+    // FORMULA DOPPIO PASSAGGIO
+    // let sconto = prezzoPieno * (percentualeScontoUno/100);
+    // let prezzoFinale = prezzoPieno - sconto;
+    console.log(prezzoFinale);
 
-if (numerokm * prezzo - sconto && età <= 17) {
-    console.log(prezzo, sconto);
-} else if (numerokm * prezzo - scontoDue && età >= 65) {
-    console.log(prezzo, scontoDue);
+} else if (età >= 65) {
+    let sconto = prezzoPieno * (percentualeScontoDue/100);
+    let prezzoFinale = prezzoPieno - sconto;
+    console.log(prezzoFinale)
+
 } else {
-    (numerokm * prezzo)
-    console.log(prezzo);
+    console.log(prezzoPieno);
 }
