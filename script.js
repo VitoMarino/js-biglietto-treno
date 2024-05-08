@@ -5,17 +5,20 @@
 // 3. Va applicato uno sconto del 42% per gli over 65.
 // 4. L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo) [questo richiederà un minimo di ricerca]
 
-const numerokm = prompt("Quanti km vuoi percorrere?");
-const età = prompt("Quanti anni hai?");
+const numerokm = parseInt(prompt("Quanti km vuoi percorrere?"));
+const età = parseInt(prompt("Quanti anni hai?"));
 let prezzo = 0.276;
-let percentualeSconto1 = 21;
-let percentualeSconto2 = 42;
+let percentualeScontoUno = 21;
+let percentualeScontoDue = 42;
 
-if (numerokm * prezzo && età <= 17); {
-    let prezzo = (prezzo/100 * percentualeSconto1);
-    console.log = (prezzo);
+let sconto = (prezzo/100) * percentualeScontoUno;
+let scontoDue = (prezzo/100) * percentualeScontoDue;
 
-} else (numerokm * prezzo && età >= 65); {
-    let prezzo = (prezzo/100 * percentualeSconto2);
-    console.log = (prezzo);
+if (numerokm * prezzo - sconto && età <= 17) {
+    console.log(prezzo, sconto);
+} else if (numerokm * prezzo - scontoDue && età >= 65) {
+    console.log(prezzo, scontoDue);
+} else {
+    (numerokm * prezzo)
+    console.log(prezzo);
 }
