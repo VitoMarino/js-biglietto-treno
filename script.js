@@ -11,11 +11,11 @@ let prezzo = 0.276;
 let percentualeSconto1 = 21;
 let percentualeSconto2 = 42;
 
-if (numerokm * prezzo && età ≤ 17); {
+if (numerokm * prezzo && età <= 17); {
     let prezzo = (prezzo/100 * percentualeSconto1);
     console.log = (prezzo);
 
-} else (numerokm * prezzo && età ≥ 65); {
+} else (numerokm * prezzo && età >= 65); {
     let prezzo = (prezzo/100 * percentualeSconto2);
     console.log = (prezzo);
 }
