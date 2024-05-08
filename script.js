@@ -18,13 +18,13 @@ if (età <= 17) {
     // FORMULA DOPPIO PASSAGGIO
     // let sconto = prezzoPieno * (percentualeScontoUno/100);
     // let prezzoFinale = prezzoPieno - sconto;
-    console.log(prezzoFinale);
+    console.log(Math.round(prezzoFinale));
 
 } else if (età >= 65) {
     let sconto = prezzoPieno * (percentualeScontoDue/100);
     let prezzoFinale = prezzoPieno - sconto;
-    console.log(prezzoFinale)
+    console.log(Math.round(prezzoFinale));
 
 } else {
-    console.log(prezzoPieno);
+    console.log(Math.round(prezzoPieno));
 }
